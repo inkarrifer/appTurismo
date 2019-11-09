@@ -10,6 +10,7 @@ import android.widget.Button;
 public class LoginActivity extends AppCompatActivity {
 
     private Button btnIniciar;
+    private Button btnRegistrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnIniciar = findViewById(R.id.btnIniciar);
+        btnRegistrar = findViewById(R.id.bntRegistrar);
 
     }
 
@@ -27,9 +29,18 @@ public class LoginActivity extends AppCompatActivity {
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, ListarLugaresActivity.class);
+                Intent intent = new Intent(LoginActivity.this, NavegacionActivity.class);
                 startActivity(intent);
             }
         });
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegistrarUsuarioActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

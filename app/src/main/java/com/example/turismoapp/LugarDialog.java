@@ -1,29 +1,23 @@
 package com.example.turismoapp;
 
 import android.app.Dialog;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.turismoapp.ui.map.MapFragment;
-import com.example.turismoapp.ui.slideshow.SlideshowFragment;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class LugarDialog extends Dialog {
 
     private Button btnVerMapa, btnVerDetalle;
-    private Context context;
+    private AppCompatActivity context;
     private Lugar lugar;
     private LugarAdapter adapter;
 
@@ -35,7 +29,7 @@ public class LugarDialog extends Dialog {
         this.lugar = lugar;
     }
 
-    public LugarDialog(@NonNull Context context, LugarAdapter adapter) {
+    public LugarDialog(@NonNull AppCompatActivity context, LugarAdapter adapter) {
         super(context);
         this.context = context;
         this.adapter = adapter;
@@ -63,7 +57,7 @@ public class LugarDialog extends Dialog {
                 // Crear fragmento de tu clase
                 Fragment fragment = new MapFragment();
                 // Obtener el administrador de fragmentos a través de la actividad
-                FragmentManager fragmentManager = lugar.getSupportFragmentManager();
+                FragmentManager fragmentManager = context.getSupportFragmentManager();
                 // Definir una transacción
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 // Remplazar el contenido principal por el fragmento
@@ -72,12 +66,21 @@ public class LugarDialog extends Dialog {
                 // Cambiar
                 fragmentTransaction.commit();
 
+                Intent intent = new Intent(getContext(), NavegacionActivity.class);
+                context.startActivity(intent);
+
+                dismiss();
+
             }
         });
 
         btnVerDetalle.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {/*
+            public void onClick(View view) {
+
+
+
+                /*
 
                 RetrofitMetodos retrofit = RetrofitService.obtenerConfiguracion()
                         .create(RetrofitMetodos.class);

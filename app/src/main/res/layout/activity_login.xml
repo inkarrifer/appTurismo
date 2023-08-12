@@ -7,59 +7,83 @@
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:padding="20dp"
+    android:background="@drawable/fondo"
     tools:context=".LoginActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Turismo Lurín"
-        android:textAlignment="center"></TextView>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:text="Inicia sesión o Regístrate"
-        android:textAlignment="center"
-        android:padding="30dp"></TextView>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ingrese su usuario"></EditText>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="Ingrese su contraseña"></EditText>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="40dp">
-        <Button
-            android:id="@+id/btnIniciar"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="inciar"></Button>
-        <Button
-            android:id="@+id/bntRegistrar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Registrarse"></Button>
-    </LinearLayout>
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Olvidé mi contraseña"
-        android:textAlignment="center"
-        android:padding="30dp"></TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_tur"
+                android:layout_gravity="center"></ImageView>
+            <!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:text="Turismo Lurín"
+                    android:textAlignment="center"></TextView> -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="Inicia sesión o Regístrate"
+                android:textAlignment="center"
+                android:padding="30dp"></TextView>
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese su usuario"></EditText>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Ingrese su contraseña"></EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+                <Button
+                    android:id="@+id/btnIniciar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="inciar"></Button>
+                <Button
+                    android:id="@+id/bntRegistrar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Registrarse"></Button>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRecupera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Olvidé mi contraseña"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:padding="10dp"></TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

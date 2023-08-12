@@ -1,16 +1,16 @@
-package com.example.turismoapp.ui.slideshow;
+package com.example.turismoapp.ui.lugares;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class LugaresViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public LugaresViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is lugares fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,5 +1,6 @@
 package com.example.turismoapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -24,6 +25,7 @@ import android.view.Menu;
 public class NavegacionActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    //private int previousFragment = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,22 +37,53 @@ public class NavegacionActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Snackbar.make(view, "Crearemos una recomendación para ti", Snackbar.LENGTH_LONG)
+                        .setAction("Crear Guía", null).show();
+
+                Intent intent = new Intent(NavegacionActivity.this, CrearGuiaActivity.class);
+                startActivity(intent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
+        /*mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_map, R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
                 R.id.nav_tools, R.id.nav_share, R.id.nav_send)
                 .setDrawerLayout(drawer)
+                .build();*/
+
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_map, R.id.nav_slideshow, R.id.nav_home)
+                .setDrawerLayout(drawer)
                 .build();
+
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        /*
+        getIntent().putExtra("tiempo",0);
+        getIntent().putExtra("edad",0);
+        getIntent().putExtra("grupo",0);
+        getIntent().putExtra("presupuesto",0);
+        getIntent().putExtra("tipo",0);
+*/
+
+
+        // Viene y trae datos del CrearGuiaActivity para aparecer en el Fragmento de lugares
+        /*Bundle bundle = getIntent().getExtras();
+        int previousFragment = bundle.getInt("Fragment");*/
+/*
+        previousFragment = getIntent().getIntExtra("Fragment",3);
+
+        if(previousFragment == 3) {
+            // llamar al fragment
+            LugaresFragment fragment = new LugaresFragment();
+            FragmentManager ft = getSupportFragmentManager();
+            ft.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit();
+        }*/
     }
 
     @Override

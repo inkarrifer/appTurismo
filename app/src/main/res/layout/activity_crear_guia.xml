@@ -35,19 +35,23 @@
                     android:layout_height="wrap_content"
                     android:text="1. ¿Cuanto tiempo estará en el lugar?"></TextView>
                 <RadioGroup
+                    android:id="@+id/rTiempo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <RadioButton
+                        android:id="@+id/t1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Menos de 6 horas"></RadioButton>
                     <RadioButton
+                        android:id="@+id/t2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Al menos 1 día"></RadioButton>
                     <RadioButton
+                        android:id="@+id/t3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Mas de 1 día"></RadioButton>
@@ -65,27 +69,33 @@
                     android:layout_height="wrap_content"
                     android:text="2. ¿Qué clase de grupo es?"></TextView>
                 <RadioGroup
+                    android:id="@+id/rGrupo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <RadioButton
+                        android:id="@+id/g1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Familiares"></RadioButton>
                     <RadioButton
+                        android:id="@+id/g2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Amigos"></RadioButton>
                     <RadioButton
+                        android:id="@+id/g3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Pareja"></RadioButton>
                     <RadioButton
+                        android:id="@+id/g4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Negocio"></RadioButton>
                     <RadioButton
+                        android:id="@+id/g5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Solo"></RadioButton>
@@ -103,31 +113,38 @@
                     android:layout_height="wrap_content"
                     android:text="4. ¿Qué tipo de turismo busca?"></TextView>
                 <RadioGroup
+                    android:id="@+id/rTipo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <RadioButton
+                        android:id="@+id/v1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Arqueológico"></RadioButton>
                     <RadioButton
+                        android:id="@+id/v2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Folclórico"></RadioButton>
                     <RadioButton
+                        android:id="@+id/v3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Gastronomía"></RadioButton>
                     <RadioButton
+                        android:id="@+id/v4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Deporte y Aventura"></RadioButton>
                     <RadioButton
+                        android:id="@+id/v5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Ecológico"></RadioButton>
                     <RadioButton
+                        android:id="@+id/v6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Vivencial"></RadioButton>
@@ -145,23 +162,28 @@
                     android:layout_height="wrap_content"
                     android:text="5. ¿Cuál es la edad promedio del grupo?"></TextView>
                 <RadioGroup
+                    android:id="@+id/rEdad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <RadioButton
+                        android:id="@+id/e1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Entre 5 y 12 años"></RadioButton>
                     <RadioButton
+                        android:id="@+id/e2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Entre 12 y 18 años"></RadioButton>
                     <RadioButton
+                        android:id="@+id/e3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Entre 18 y 50 años"></RadioButton>
                     <RadioButton
+                        android:id="@+id/e4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="De 50 a más años"></RadioButton>
@@ -179,23 +201,28 @@
                     android:layout_height="wrap_content"
                     android:text="5. ¿Con que presupuesto dispone?"></TextView>
                 <RadioGroup
+                    android:id="@+id/rPresupuesto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
                     <RadioButton
+                        android:id="@+id/p1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Gratis"></RadioButton>
                     <RadioButton
+                        android:id="@+id/p2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Menos de 100 soles"></RadioButton>
                     <RadioButton
+                        android:id="@+id/p3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Entre 100 y 300 soles"></RadioButton>
                     <RadioButton
+                        android:id="@+id/p4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Más de 300 soles"></RadioButton>
@@ -208,6 +235,7 @@
                 android:orientation="vertical"
                 android:padding="60dp">
                 <Button
+                    android:id="@+id/btnEjecutar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ejecutar"></Button>

@@ -1,6 +1,8 @@
 package com.example.turismoapp;
 
-public class Lugar {
+import java.io.Serializable;
+
+public class Lugar implements Serializable {
 
     private int id;
     private String nombre;
@@ -10,8 +12,12 @@ public class Lugar {
     private double coordenaday;
     private int calificacion;
     private String descripcion;
+    private String imagen;
 
-    public Lugar(int id, String nombre, String direccion, int tarifa, double coordenadax, double coordenaday, int calificacion, String descripcion) {
+    public Lugar() {
+    }
+
+    public Lugar(int id, String nombre, String direccion, int tarifa, double coordenadax, double coordenaday, int calificacion, String descripcion, String ruta) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -20,6 +26,7 @@ public class Lugar {
         this.coordenaday = coordenaday;
         this.calificacion = calificacion;
         this.descripcion = descripcion;
+        this.imagen = ruta;
     }
 
     public int getId() {
@@ -84,5 +91,13 @@ public class Lugar {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }
